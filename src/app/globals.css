@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-krag-emerald: #07291E;
+  --color-krag-emerald-dark: #041D15;
+  --color-krag-lime: #B4F256;
+  --color-krag-lime-hover: #A3E63D;
+  --color-krag-surface: #F7F7F5;
+  --color-krag-mint: #EFF9F3;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F7F7F5;
+  color: #07291E;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-cv,
+  #printable-cv * {
+    visibility: visible;
+  }
+  #printable-cv {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
